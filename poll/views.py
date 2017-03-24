@@ -28,6 +28,7 @@ def add(request):
 	q = Item()
 	q.name = request.POST['name']
 	q.itemType = request.POST['itemType']
+	q.itemimage = request.FILES['item_image']
 	q.save()
 	return render(request, 'poll/detail.html' , {'obj' : q,})
 

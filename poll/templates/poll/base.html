@@ -1,7 +1,10 @@
 {% load static %}
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+{% load static %}
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% load static %}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Lobster" rel="stylesheet"> 
 
 <!--{% load static %}
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -9,6 +12,9 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 -->
+
+{% block head %}
+{% endblock %}
 
 
 <style>
@@ -18,8 +24,27 @@
 
 .jumbotron {
 	margin:0px;
+	padding:20px 60px;
 }
 
+.jumbotron h3 {
+	font-family:'Facinate Inline', cursive;
+}
+
+.jumbotron h1 {
+	font-family:'Lobster', cursive;
+	color:green;
+}
+
+.container-fluid {
+	background-image: url({% static '/poll/images/banner.jpg' %});
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
 </style>
 
 <div class="container-fluid">
@@ -54,5 +79,13 @@
 	</div>
 </nav>
 
+
+
+
+
 {% block body %}
+{% endblock %}
+
+
+{% block footer %}\
 {% endblock %}
