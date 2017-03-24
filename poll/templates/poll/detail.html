@@ -1,0 +1,18 @@
+{% extends 'poll/base.html' %}
+
+
+{% block body %}
+{% load staticfiles %}
+	<link rel="stylesheet" href=" {% static 'poll/style_detail.css' %} " type="text/css" >
+
+<div id="panel-container">
+<div id="container">
+	<h2>Item-Details</h2>
+	<div class="panel panel-default">
+		<div class="panel-heading"><strong>Name</strong> : {{ obj.name }}</div>
+		<div class="panel-body"><strong>Type</strong> : {{ obj.itemType }}</div>
+	</div>
+</div>
+</div>
+
+{% endblock %}

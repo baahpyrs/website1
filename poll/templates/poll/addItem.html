@@ -1,0 +1,25 @@
+{% extends 'poll/base.html' %}
+
+
+{% block body %}
+{% load staticfiles %}
+	<link href="{% static 'poll/style_add.css'%}" type="text/css" rel="stylesheet"/>
+	
+<div id="formContainer" >
+<p id="formHead">Add an Item</p>
+<form action="{% url 'add' %}" method="post" >
+{% csrf_token %}
+	<div class="formField">
+	<label for="name"> Item Name:</label><br>
+	<input type="text" name="name" id="name">&nbsp<br>
+	</div>
+	<div class="formField">
+	<label for="type"> Item Type:</label><br>
+	<input type="text" name="itemType" id="type">&nbsp
+	<br>
+	</div>
+	
+	<input type="submit" value="Add" id="submit">
+</div>
+	
+{% endblock %}
