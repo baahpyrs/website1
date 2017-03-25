@@ -5,7 +5,7 @@ from .models import Item
 from django.template import loader
 
 def index(request):
-	obj = Item.objects.order_by('id')[:8]
+	obj = Item.objects.order_by('id')[:9]
 	template = loader.get_template('poll/index.html')
 	content = {'obj' : obj,}
 	return HttpResponse(template.render(content,request))
