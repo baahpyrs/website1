@@ -4,7 +4,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 {% load static %}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Lobster" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Lobster|Gloria+Hallelujah|Orbitron|Comforta|Chewy|Rock+Salt|Pangolin" rel="stylesheet"> 
+<!--	<link rel="stylesheet" href="{% static 'poll/style.css' %}" type="text/css">
 
 <!--{% load static %}
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -28,17 +29,24 @@
 }
 
 .jumbotron h3 {
-	font-family:'Facinate Inline', cursive;
+/*	font-family:'Facinate Inline', cursive;
+	font-family:'Gloria Hallelujah', cursive;*/
+	font-family:'Comforta', cursive;
+
 }
 
 .jumbotron h1 {
-	font-family:'Lobster', cursive;
-	color:green;
+	font-family:'Chewy', cursive;
+	color:rgb(10,50,120);
+	text-shadow: 0px 3px 5px rgb(50,90,150);
 }
 
-.container-fluid {
-	background-image: url({% static '/poll/images/banner.jpg' %});
+#banner {
+	{% load staticfiles %}
+	background-image:url("{% static 'poll/images/banner3.png' %}");
+	border-radius:0px;
 }
+
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -48,9 +56,9 @@
 </style>
 
 <div class="container-fluid">
-	<div class="jumbotron">
-		<h1>BUY | SELL | DONATE</h1>
-		<h3>Campus Connect</h3>
+	<div class="jumbotron" id="banner">
+		<h1>Campus Connect</h1>
+		<h3>BUY | SELL | DONATE</h3>
 	</div>
 </div>
 
@@ -63,7 +71,7 @@
 <nav class="nav navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="{% url 'index' %}">Campus Connnect</a>
+			<a class="navbar-brand" href="{% url 'index' %}" style="font-family: 'Rock Salt',cursive;">Campus Connnect</a>
 		</div>
 		<ul class="nav navbar-nav"> 
 			<li><a class="active" href="{% url 'index' %}">Home</a></li>

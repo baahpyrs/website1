@@ -41,7 +41,7 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'poll/style.css' %}" />
 
-<div class="container-fluid">
+<div class="container-fluid" id="carousel-contain">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -55,7 +55,7 @@
     <div class="carousel-inner" role="listbox">
       <div class="item active">
       	{% load staticfiles %}
-        <img src="{% static 'poll/images/abcd.jpg' %}" alt="AChania" width="20px" class="responsive caroimg" style="width:100%; height:300px;">
+        <img src="{% static 'poll/images/slide1.jpg' %}" alt="AChania" width="20px" class="responsive caroimg" style="width:100%; height:300px;">
       </div>
 
       <div class="item">
@@ -84,7 +84,8 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+  </div>
+  
 {% if obj %}
 	<div class="container">
 	<div class="row">
